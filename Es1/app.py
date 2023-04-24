@@ -11,13 +11,19 @@ def main():
 if __name__ == "__main__":
     main()
 
+number = st.number_input('Insert Age')
+st.write('The current Age is', number, 'years old')
 
-boy = 13
+select = st.radio(
+    "And you are:",
+    ('With Car license', 'Without Car license'))
+
+boy = number
 patente = False
 
-if boy >= 18 and patente==True:
-    print("Daje vezz ce l'hai gia la patente")
-elif boy >=18 and patente==False:
-    print("Daje oooh, sta patentina quando al prendiamo?")
+if number >= 18 and select == 'With Car license':
+    st.write("Daje vezz ce l'hai gia la patente")
+elif number >= 18 and select == 'Without Car license':
+    st.write("Daje oooh, sta patentina quando al prendiamo?")
 else:
-    print("Sus Bro, troppo cinno")
+    st.write("Sus Bro, troppo cinno")
